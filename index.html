@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header"></div>
+
+    <div class="sidebar">
+      <div class="btnbox">
+        <div id="btn">
+          <span class="noselect">Users</span>
+          <div id="circle" onclick="users()"></div>
+        </div>
+        <div id="btn">
+          <span class="noselect">books</span>
+          <div id="circle" onclick="showbooks()"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainbox" id="mainbox"></div>
+    <div class="mainbox books" id="booksdiv">
+      <!-- space -->
+      <div class="userbox" id="book1">
+        <img src="hp.jpg" data-modal-target="#modal" />
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Harry Potter and the Philosopher's Stone</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Harry Potter thinks he is an ordinary boy - until he is rescued by an owl, taken to Hogwarts School of Witchcraft and Wizardry, learns to
+            play Quidditch and does battle in a deadly duel. The Reason ... HARRY POTTER IS A WIZARD!
+          </div>
+          <div class="info" id="info1"></div>
+          <div class="info" id="info2"></div>
+          <button id="borrow" onclick="borrow(0)">click to borrow book</button>
+        </div>
+        <div id="overlay"></div>
+      </div>
+
+      <!-- space -->
+      <div class="userbox" id="book2">
+        <img src="lotr.jpg" data-modal-target="#modal2" />
+        <div class="modal" id="modal2">
+          <div class="modal-header">
+            <div class="title">Lord Of The Rings</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            When the eccentric hobbit Bilbo Baggins leaves his home in the Shire, he gives his greatest treasure to his heir Frodo: a magic ring that
+            makes its wearer invisible. Because of the difficulty Bilbo has in giving the ring away, his friend the wizard Gandalf the Grey suspects
+            that the ring is more than it appears...
+          </div>
+          <div class="info" id="info1"></div>
+          <div class="info" id="info2"></div>
+        </div>
+        <div id="overlay"></div>
+      </div>
+
+      <!-- space -->
+
+      <div class="userbox" id="book3">
+        <img src="1984.jpg" data-modal-target="#modal3" />
+        <div class="modal" id="modal3">
+          <div class="modal-header">
+            <div class="title">1984</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            1984 is a dystopian novella by George Orwell published in 1949, which follows the life of Winston Smith, a low ranking member of 'the
+            Party', who is frustrated by the omnipresent eyes of the party, and its ominous ruler Big Brother. 'Big Brother' controls every aspect of
+            people's lives.
+          </div>
+          <div class="info" id="info1"></div>
+          <div class="info" id="info2"></div>
+        </div>
+        <div id="overlay"></div>
+      </div>
+
+      <!-- space -->
+    </div>
+    <div class="footer">
+      <video class="video" autoplay loop muted>
+        <source src="fireplace.mp4" type="video/mp4" />
+        I am sorry, your video failed to load.
+      </video>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

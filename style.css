@@ -1,0 +1,237 @@
+.btnbox {
+  z-index: 1;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+#btn {
+  z-index: 2;
+  margin-bottom: 50px;
+  background: #222;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 40px;
+  font-family: "Cookie", cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btn:hover {
+  background: transparent;
+}
+
+#btn:hover #circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 15;
+  background-color: white;
+  width: 800px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-weight: 1000px;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#info1 {
+  color: darkgreen;
+}
+
+#info2 {
+  color: darkgreen;
+}
+
+#borrow {
+  background-color: grey;
+  font-size: 45px;
+}
+
+* {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  background-image: url(headerbooks.jpg);
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid black;
+  z-index: 9;
+}
+
+.sidebar {
+  z-index: 1;
+  margin-bottom: 151px;
+  margin-top: 151px;
+  background-color: white;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding-top: 16px;
+  background-color: #553939;
+}
+
+.footer {
+  z-index: 9;
+  background-image: url(headerbooks.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.footer .video {
+  position: relative;
+  right: 0;
+  z-index: 10;
+  height: 100%;
+  width: auto;
+}
+
+.mainbox {
+  z-index: -1;
+  margin-left: 300px;
+  margin-right: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.userbox {
+  margin: 25px;
+  height: 300px;
+  width: 350px;
+  border: 1px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 550;
+  font-family: "Crimson Text", serif;
+  color: #553939;
+}
+.userbox button {
+  border: none;
+  background-color: white;
+  font-size: 100px;
+  color: #5da7db;
+}
+.userbox button:hover {
+  cursor: pointer;
+}
+.userbox #para {
+  text-decoration: underline;
+}
+
+.books .userbox {
+  width: 300px;
+}
+.books img {
+  height: 100%;
+  width: 100%;
+}
+.books img:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
