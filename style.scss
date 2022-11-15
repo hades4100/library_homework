@@ -55,9 +55,18 @@ $mycolor: #553939;
     width: auto;
   }
 }
-.mainbox {
-  z-index: -1;
-  //   marg
+#booksdiv {
+  margin-left: 300px;
+  margin-right: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#mainbox {
   margin-left: 300px;
   margin-right: 100px;
   text-align: center;
@@ -105,4 +114,7 @@ $mycolor: #553939;
   img:hover {
     cursor: pointer;
   }
+}
+.report {
+  font-size: 60px;
 }
